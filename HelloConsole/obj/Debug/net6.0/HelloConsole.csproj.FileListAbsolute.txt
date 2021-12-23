@@ -1,0 +1,15 @@
+D:\Разработчик\CsharpExamples\HelloConsole\bin\Debug\net6.0\HelloConsole.exe
+D:\Разработчик\CsharpExamples\HelloConsole\bin\Debug\net6.0\HelloConsole.deps.json
+D:\Разработчик\CsharpExamples\HelloConsole\bin\Debug\net6.0\HelloConsole.runtimeconfig.json
+D:\Разработчик\CsharpExamples\HelloConsole\bin\Debug\net6.0\HelloConsole.dll
+D:\Разработчик\CsharpExamples\HelloConsole\bin\Debug\net6.0\ref\HelloConsole.dll
+D:\Разработчик\CsharpExamples\HelloConsole\bin\Debug\net6.0\HelloConsole.pdb
+D:\Разработчик\CsharpExamples\HelloConsole\obj\Debug\net6.0\HelloConsole.csproj.AssemblyReference.cache
+D:\Разработчик\CsharpExamples\HelloConsole\obj\Debug\net6.0\HelloConsole.GeneratedMSBuildEditorConfig.editorconfig
+D:\Разработчик\CsharpExamples\HelloConsole\obj\Debug\net6.0\HelloConsole.AssemblyInfoInputs.cache
+D:\Разработчик\CsharpExamples\HelloConsole\obj\Debug\net6.0\HelloConsole.AssemblyInfo.cs
+D:\Разработчик\CsharpExamples\HelloConsole\obj\Debug\net6.0\HelloConsole.csproj.CoreCompileInputs.cache
+D:\Разработчик\CsharpExamples\HelloConsole\obj\Debug\net6.0\HelloConsole.dll
+D:\Разработчик\CsharpExamples\HelloConsole\obj\Debug\net6.0\ref\HelloConsole.dll
+D:\Разработчик\CsharpExamples\HelloConsole\obj\Debug\net6.0\HelloConsole.pdb
+D:\Разработчик\CsharpExamples\HelloConsole\obj\Debug\net6.0\HelloConsole.genruntimeconfig.cache
