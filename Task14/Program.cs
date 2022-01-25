@@ -1,4 +1,6 @@
-﻿Console.WriteLine("Enter integer number:");
+﻿// 14. Найти третью цифру числа или сообщить, что её нет
+
+Console.WriteLine("Enter integer number:");
 string? strNumber = Console.ReadLine();
 try
 {
