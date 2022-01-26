@@ -14,9 +14,9 @@ try
         }
         Console.WriteLine();
     }
-    else Console.WriteLine("Incorrect input!");
+    else throw new FormatException();
 }
-catch
+catch (FormatException)
 {
     Console.WriteLine("Incorrect input!");
 }

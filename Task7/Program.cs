@@ -10,9 +10,9 @@ try
         for (int i = 0; i < 2 * N + 1; i++) Console.Write($" {-N + i} ");
         Console.WriteLine();
     }
-    else Console.WriteLine("Incorrect input!");
+    else throw new FormatException();
 }
-catch
+catch (FormatException)
 {
     Console.WriteLine("Incorrect input!");
 }
