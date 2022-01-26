@@ -39,17 +39,13 @@ if (secondNumber == 0)
 // {
 //     int firstNumber = Convert.ToInt32(strFirstNumber);
 //     int secondNumber = Convert.ToInt32(strSecondNumber);
-if (firstNumber * firstNumber == secondNumber)
+if ((firstNumber * firstNumber == secondNumber) || (secondNumber * secondNumber == firstNumber))
 {
-    Console.WriteLine($"Number {secondNumber} is squared number {firstNumber}");
+    Console.WriteLine("One number is squared of other number.");
 }
 else
 {
-    if (secondNumber * secondNumber == firstNumber)
-    {
-        Console.WriteLine($"Number {firstNumber} is squared number {secondNumber}");
-    }
-    else Console.WriteLine("One number is not squared of another.");
+    Console.WriteLine("One number is not squared of another.");
 }
 // }
 // catch
