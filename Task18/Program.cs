@@ -6,7 +6,7 @@ for (int i = 0; i < value1.Length; i++)
 {
     for (int j = 0; j < value2.Length; j++)
     {
-        Console.Write($" {!(value1[i]|value2[j])} ");
+        Console.Write($" {!(value1[i]||value2[j])} ");
     }
     Console.WriteLine();
 }
@@ -15,7 +15,7 @@ for (int i = 0; i < value1.Length; i++)
 {
     for (int j = 0; j < value2.Length; j++)
     {
-        Console.Write($" {!value1[i]&!value2[j]} ");
+        Console.Write($" {!value1[i]&&!value2[j]} ");
     }
     Console.WriteLine();
 }
