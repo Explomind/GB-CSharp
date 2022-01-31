@@ -20,9 +20,8 @@ try
     for (int i = 0; i < numberLength; i++)
     {
         digits[i] = number % 10;
-        digitsSum=digitsSum+digits[i];
+        digitsSum = digitsSum + digits[i];
         number = number / 10;
-        // Console.WriteLine($"{i} {digits[i]}");
     }
     Console.WriteLine($"The number has {numberLength} digits.");
     Console.WriteLine($"The sum of digits is {digitsSum}");
