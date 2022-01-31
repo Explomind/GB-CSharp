@@ -18,6 +18,15 @@ RepeatInput:
     }
 }
 
+double Multiplication(double range)
+{
+    if (range <= 1) return 1;
+    else
+    {
+        return Multiplication(range - 1) * range;
+    }
+}
+
 Console.WriteLine("Написать программу вычисления произведения чисел от 1 до N");
 double number = ReadDoubleFromConsole("Input number N: ");
 double product = 1;
@@ -25,12 +34,12 @@ if (number > 0)
 {
     for (int i = 1; i < number + 1; i++)
     {
-        product = product * i;
+        product *= i;
     }
 }
 else product = 0;
 Console.WriteLine($"Product of numbers from 1 to {number}: {product}");
-
+Console.WriteLine($"Product of numbers from 1 to {number}: {Multiplication(number)}");
 Console.WriteLine("Показать кубы чисел, заканчивающихся на четную цифру");
 number = ReadDoubleFromConsole("Input number: ");
 for (int i = 2; i < number + 1; i++)
