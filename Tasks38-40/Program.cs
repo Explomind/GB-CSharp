@@ -20,14 +20,15 @@ int SumOddPosElements(int[] intArray)
     return result;
 }
 
-void MultiPairsNumbers(int[] intArray)
+int[] MultiPairsNumbers(int[] intArray)
 {
-    //int result = 1;
-    for (int i = 0; i < intArray.Length / 2; i++)
+    int resultLength = intArray.Length % 2 == 0 ? intArray.Length / 2 : intArray.Length / 2 + 1;
+    int[] resultArray = new int[resultLength];
+    for (int i = 0; i < resultLength; i++)
     {
-        //result = intArray[i] * intArray[intArray.Length - 1 - i];
-        Console.WriteLine($"Product of {i + 1} pair: {intArray[i] * intArray[intArray.Length - 1 - i]}");
+        resultArray[i] = intArray[i] * intArray[intArray.Length - 1 - i];
     }
+    return resultArray;
 }
 
 int MinMaxDelta(int[] intArray)
@@ -43,12 +44,14 @@ int MinMaxDelta(int[] intArray)
 }
 
 Console.WriteLine("Найти сумму чисел одномерного массива стоящих на нечетной позиции");
-int[] numbersArray = new int[10];
+int[] numbersArray = new int[11];
 FillArrayRandomInt(numbersArray, -10, 10);
 Console.WriteLine($"Sum of numbers in odd positions: {SumOddPosElements(numbersArray)}");
 
 Console.WriteLine("Найти произведение пар чисел в одномерном массиве. Парой считаем первый и последний элемент, второй и предпоследний и т.д.");
-MultiPairsNumbers(numbersArray);
+int[] multiArray = MultiPairsNumbers(numbersArray);
+for(int i=0; i<multiArray.Length;i++) Console.Write($" {multiArray[i]} ");
+Console.WriteLine();
 
 Console.WriteLine("В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом");
 Console.WriteLine($"Delta between max and min numbers: {MinMaxDelta(numbersArray)}");
