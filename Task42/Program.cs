@@ -1,14 +1,19 @@
 ﻿// 42. Определить сколько чисел больше 0 введено с клавиатуры
 
-int ReadIntFromConsole(string msg)
+int[] ReadIntArrayFromConsole(string msg)
 {
 RepeatInput:
-    Console.Write(msg);
+    Console.WriteLine(msg);
     string? strResult = Console.ReadLine();
+    string[] strTemp = strResult.Split(" ");
+    int[] intResult = new int[strTemp.Length];
     try
     {
-        int result = Convert.ToInt32(strResult);
-        return result;
+        for (int i = 0; i < intResult.Length; i++)
+        {
+            intResult[i] = Convert.ToInt32(strTemp[i]);
+        }
+        return intResult;
     }
     catch (FormatException)
     {
@@ -20,7 +25,7 @@ RepeatInput:
 int PositiveIntAmount(int[] intArray)
 {
     int result = 0;
-    for (int i=0;i<intArray.Length;i++)
+    for (int i = 0; i < intArray.Length; i++)
     {
         if (intArray[i] > 0) result++;
     }
@@ -28,10 +33,5 @@ int PositiveIntAmount(int[] intArray)
 }
 
 Console.WriteLine("Определить сколько чисел больше 0 введено с клавиатуры");
-int arrayLength = 10;
-int[] numberArray = new int[arrayLength];
-for (int i = 0; i < numberArray.Length; i++)
-{
-    numberArray[i] = ReadIntFromConsole($"Input {i + 1} number: ");
-}
+int[] numberArray = ReadIntArrayFromConsole("Input numbers separated by spaces:");
 Console.WriteLine($"There are {PositiveIntAmount(numberArray)} numbers more than 0.");
