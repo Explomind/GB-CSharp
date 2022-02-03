@@ -35,5 +35,5 @@ if (k1 != k2)
     (double X, double Y) = LinearEquation(k1, b1, k2, b2);
     Console.WriteLine($"Point of intersection of lines: X = {X}, Y = {Y}");
 }
-else if (b1 != b2) Console.WriteLine("The lines are parallel.");
-else Console.WriteLine("The lines coincide.");
+else if (b1 != b2) Console.WriteLine("The lines are parallel!");
+else Console.WriteLine("The lines coincide!");
