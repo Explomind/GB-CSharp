@@ -7,9 +7,7 @@ int[] CreateArrayRandomInt(int arraySize, int min, int max)
     for (int i = 0; i < arraySize; i++)
     {
         result[i] = rnd.Next(min, max + 1);
-        // Console.Write($" {intArray[i]} ");
     }
-    // Console.WriteLine();
     return result;
 }
 

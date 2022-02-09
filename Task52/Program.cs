@@ -26,16 +26,13 @@ void Print2DIntArray(int[,] array)
     }
 }
 
-void ChangeElements(int[,] array)
+void ChangeElementsEvenIndexes(int[,] array)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i += 2)
     {
-        if (i % 2 == 0)
+        for (int j = 0; j < array.GetLength(1); j += 2)
         {
-            for (int j = 0; j < array.GetLength(1); j++)
-            {
-                if (j % 2 == 0) array[i, j] *= array[i, j];
-            }
+            array[i, j] *= array[i, j];
         }
     }
 }
@@ -45,6 +42,6 @@ Console.WriteLine("В двумерном массиве заменить эле�
 // int qntColumns = ReadIntFromConsole("Input amount of columns: ");
 int[,] int2DArray = Create2DArrayRandomInt(3, 3, 0, 10);
 Print2DIntArray(int2DArray);
-ChangeElements(int2DArray);
+ChangeElementsEvenIndexes(int2DArray);
 Console.WriteLine("New array:");
 Print2DIntArray(int2DArray);
