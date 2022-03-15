@@ -18,28 +18,23 @@ RepeatInput:
     }
 }
 
-// string[] Int3dToStringArray(int[,,] array)
-// {
-//     string[] result = new string[array.GetLength(0) * array.GetLength(1) * array.GetLength(2)];
-//     int l = 0;
-//     foreach (int item in array)
-//     {
-//         result[l] = Convert.ToString(item);
-//         l++;
-//     }
-//     return result;
-// }
-
-// void PrintStringArray(string[] array)
-// {
-//     foreach (string item in array) Console.Write($"{item}\t");
-//     Console.WriteLine();
-// }
-
 bool IsUnique(int[,,] array, int item, int iPos, int jPos, int kPos)
 {
     bool result = true;
-
+    for (int i = iPos; i >= 0; i--)
+    {
+        for (int j = jPos; j >= 0; j--)
+        {
+            for (int k = kPos; k >= 0; k--)
+            {
+                if (item == array[i, j, k])
+                {
+                    result = false;
+                    break;
+                }
+            }
+        }
+    }
     return result;
 }
 
@@ -55,7 +50,8 @@ int[,,] Create3dArrayRandomUniqueInt(int firstDim, int secondDim, int thirdDim, 
             for (int k = 0; k < thirdDim; k++)
             {
                 tmp = rnd.Next(min, max + 1);
-                if (IsUnique(result, tmp, i, j, k)) result[i, j, k] = tmp;
+                if (IsUnique(result, tmp, i, secondDim - 1, thirdDim - 1)) result[i, j, k] = tmp;
+                else k--;
             }
         }
     }
@@ -81,8 +77,6 @@ void Print3dIntArray(int[,,] array)
 int firstDim = ReadIntFromConsole("Input the first dimension: ");
 int secondDim = ReadIntFromConsole("Input the second dimension: ");
 int thirdDim = ReadIntFromConsole("Input the third dimension: ");
-int[,,] int3dArray = Create3dArrayRandomUniqueInt(firstDim, secondDim, thirdDim, 0, 10);
+int randRange = firstDim * secondDim * thirdDim;
+int[,,] int3dArray = Create3dArrayRandomUniqueInt(firstDim, secondDim, thirdDim, -randRange, randRange);
 Print3dIntArray(int3dArray);
-// Console.WriteLine();
-// string[] strArray = Int3dToStringArray(int3dArray);
-// PrintStringArray(strArray);
