@@ -83,6 +83,6 @@ int secondDim = ReadIntFromConsole("Input the second dimension: ");
 int thirdDim = ReadIntFromConsole("Input the third dimension: ");
 int[,,] int3dArray = Create3dArrayRandomUniqueInt(firstDim, secondDim, thirdDim, 0, 10);
 Print3dIntArray(int3dArray);
-Console.WriteLine();
+// Console.WriteLine();
 // string[] strArray = Int3dToStringArray(int3dArray);
 // PrintStringArray(strArray);
