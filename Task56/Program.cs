@@ -45,13 +45,13 @@ void Print2DIntArray(int[,] array)
 
 void ChangeFirstLastRows(int[,] array)
 {
-    int[] tmpRow = new int[array.GetLength(1)];
+    int tmp;
     int lastRow = array.GetLength(0) - 1;
     for (int i = 0; i < array.GetLength(1); i++)
     {
-        tmpRow[i] = array[0, i];
+        tmp = array[0, i];
         array[0, i] = array[lastRow, i];
-        array[lastRow, i] = tmpRow[i];
+        array[lastRow, i] = tmp;
     }
 }
 
